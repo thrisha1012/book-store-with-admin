@@ -2,11 +2,12 @@ require('dotenv').config(); // Load the .env file
 
 const express = require("express");
 const app = express();
-app.use(express.json());
+const cors=require("cors");
 
+app.use(express.json());
+app.use(cors());
 const mongoose = require("mongoose");
 require("./conn/conn");  // Connecting to MongoDB
-
 const PORT = process.env.PORT || 3000;  // Use the port from the .env file or default to 3000
 
 // routes
