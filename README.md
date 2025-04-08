@@ -9,6 +9,8 @@
  npm i axios
  npm i @reduxjs/toolkit react-dom
  npm i react-icons
+ npm install react-redux
+
 
  backend:
  to run -> node App.js
