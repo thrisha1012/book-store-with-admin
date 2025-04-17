@@ -1,8 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react';
+import Loader from "../components/Loader/Loader";
 
 const Cart = () => {
+
+  const [Cart,setCart]=useState();
   return (
-    <div>Cart</div>
+    <>
+    {!Cart && <Loader/>}
+    {Cart && Cart.length==0 && (
+      <div className='h-screen'>
+
+      </div>
+    )}
+    </>
   )
 }
 
