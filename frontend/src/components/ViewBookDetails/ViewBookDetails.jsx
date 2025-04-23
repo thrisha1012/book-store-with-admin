@@ -71,7 +71,7 @@ const ViewBookDetails = () => {
   
 
   const handleCart=async()=>{
-    const response=await axios.put("http://localhost:3000/api/v1/add-to-cart",{},{headers});
+    const response=await axios.put("http://localhost:3000/api/v1/add-to-cart",{bookid:data._id,},{headers});
     alert(response.data.message);
   }
   
